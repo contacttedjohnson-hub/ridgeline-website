@@ -36,8 +36,12 @@ from the folder.
 GitHub Pages, from the `main` branch, root folder, the same as the
 Vineland site. Any push to `main` goes live a minute or two later.
 
-The custom domain is **ridgelinerealtyfl.com**. These two pieces are left
-off on purpose until the domain is bought and the content is real:
+The custom domain is **ridgelinerealtyfl.com**, registered at Porkbun on
+2026-10-20 through 2029-10-20. DNS is at Porkbun. The site went live on
+2026-10-20 with the featured-homes sections hidden (the `hidden` word on
+each section) until real listings exist.
+
+How the launch was done, kept for reference:
 
 1. **No `CNAME` file yet.** Once one exists, GitHub sends every visitor to
    ridgelinerealtyfl.com, and that address does not work until the domain
