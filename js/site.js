@@ -36,6 +36,15 @@
     });
   });
 
+  // 3b. If the visitor picks email as the way to reach them, the email box becomes required.
+  document.querySelectorAll('select[name="contact_preference"]').forEach(function (sel) {
+    var email = sel.form && sel.form.querySelector('input[name="email"]');
+    if (!email) return;
+    var sync = function () { email.required = sel.value === 'Email'; };
+    sel.addEventListener('change', sync);
+    sync();
+  });
+
   // 4. Forms
   document.querySelectorAll('form[data-email]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
