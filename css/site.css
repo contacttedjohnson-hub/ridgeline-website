@@ -317,3 +317,10 @@ ol.steps li{padding:18px 0}
   .member-photo span{font-size:30px}
   .member h2{font-size:24px}
 }
+.partners{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.partner{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:4px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:6px}
+.partner .kind{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.partner h3{font-size:20px}
+.partner p{color:var(--muted);font-size:15px;flex:1}
+.partner a{font-weight:700;color:var(--navy);font-size:15px}
+@media (max-width:900px){.partners{grid-template-columns:1fr}}
