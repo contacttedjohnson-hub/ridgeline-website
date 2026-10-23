@@ -1,0 +1,43 @@
+# Listing details for 505 Clubhouse Dr.
+# Lines are "field: value". Leave a value empty if you don't know it; empty fields are left off the page.
+# After editing, ask Claude to "rebuild the listings" (or run: python build_listings.py).
+
+address: 505 Clubhouse Dr
+city: Lake Wales, FL 33898
+status: For sale
+price: 240000
+beds: 2
+baths: 2
+sqft: 1678
+year_built: 1987
+garage: 2-car attached
+community: Country Club Village, Lake Wales
+hoa:
+lot_size:
+mls_number:
+listing_link:
+description: A villa on Clubhouse Drive with a two-car garage, a private courtyard entry, a fireplace, and a kitchen with skylights under a wood ceiling. The community has a screened pool and a clubhouse.
+checked: 2026-10-23, price, beds, baths, size and year confirmed by Ted; community from Living Central
+
+photos_folder: 505-clubhouse
+
+# Photos live in img/listings/505-clubhouse/. One line per photo, in display order: "photo: file | caption".
+# The first photo is the main one. 16 (rear lawn) is left out until it is confirmed to be this house.
+photo: 01.jpg | Front of the home and two-car garage
+photo: 02.jpg | Courtyard entry
+photo: 03.jpg | Covered entrance
+photo: 04.jpg | Living room
+photo: 05.jpg | Living room toward the dining area
+photo: 06.jpg | Fireplace and sitting area
+photo: 07.jpg | Dining room and kitchen pass-through
+photo: 08.jpg | Dining room
+photo: 09.jpg | Kitchen with skylights
+photo: 10.jpg | Kitchen
+photo: 11.jpg | Bedroom
+photo: 12.jpg | Bedroom
+photo: 13.jpg | Bathroom with tub
+photo: 14.jpg | Bathroom shower
+photo: 15.jpg | Second bathroom
+photo: 17.jpg | Community pool
+photo: 18.jpg | Covered seating at the community pool
+photo: 19.jpg | Community clubhouse

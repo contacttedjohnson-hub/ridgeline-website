@@ -1,0 +1,26 @@
+# New listing. Copy this file, name it after the street address (for example 123-lake-dr.txt),
+# fill in what you know, and send it with the photos. Empty fields are left off the page.
+#
+# status is one of: For sale, Under contract, Sold
+# price is a plain number, no $ or commas (for example 289000)
+
+address:
+city:
+status: For sale
+price:
+beds:
+baths:
+sqft:
+year_built:
+garage:
+community:
+hoa:
+lot_size:
+mls_number:
+listing_link:
+description:
+checked:
+
+# Put the photos in img/listings/<folder>/ and list them in order. The first is the main photo.
+photos_folder:
+photo: 01.jpg | Front of the home

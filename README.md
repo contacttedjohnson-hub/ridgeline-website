@@ -22,6 +22,14 @@ the logo drafts and design history. Built by Opus 5.5 in the chat session.
 | `js/site.js` | Phone menu, time-slot buttons, form fallback |
 | `img/` | Favicon, phone home-screen icon, link-preview picture. Put photos here too. |
 
+## Listings
+
+Each listing is a short text file in `listings/` (copy `listings/TEMPLATE.txt`)
+plus photos in `img/listings/<folder>/`. Running `python build_listings.py`
+builds the listing page, the cards on the home page and the sitemap entry.
+Never edit a listing page by hand. The steps for adding and updating listings
+are in `CLAUDE.md`.
+
 ## Editing
 
 Open a page in Notepad, change the words between the tags, save, and
