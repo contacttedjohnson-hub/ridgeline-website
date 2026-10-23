@@ -16,7 +16,7 @@ STATUS_ORDER = {"for sale": 0, "under contract": 1, "sold": 2}
 
 
 def read_listing(path):
-    data, photos = {}, []
+    data, photos, details, features = {}, [], [], []
     for raw in open(path, encoding="utf-8"):
         line = raw.strip()
         if not line or line.startswith("#") or ":" not in line:
@@ -26,6 +26,12 @@ def read_listing(path):
         if key == "photo":
             file, _, caption = value.partition("|")
             photos.append((file.strip(), caption.strip()))
+        elif key == "detail":
+            label, _, text = value.partition("|")
+            details.append((label.strip(), text.strip()))
+        elif key == "feature":
+            group, _, text = value.partition("|")
+            features.append((group.strip(), text.strip()))
         else:
             data[key] = value
     for need in ("address", "city", "status", "price", "photos_folder"):
@@ -34,6 +40,8 @@ def read_listing(path):
     if not photos:
         sys.exit(f"{os.path.basename(path)}: add at least one 'photo:' line")
     data["photos"] = photos
+    data["details"] = details
+    data["features"] = features
     data["slug"] = os.path.splitext(os.path.basename(path))[0]
     return data
 
@@ -65,7 +73,23 @@ def page_body(d):
             ("Living area", f"{int(re.sub(r'[^0-9]', '', d['sqft'])):,} sq ft" if d.get("sqft") else ""),
             ("Year built", d.get("year_built")), ("Garage", d.get("garage")), ("Lot size", d.get("lot_size")),
             ("Community", d.get("community")), ("HOA", d.get("hoa")), ("MLS number", d.get("mls_number"))]
-    table = "\n".join(f"        <div><dt>{k}</dt><dd>{e(v)}</dd></div>" for k, v in rows if v)
+    rows += d["details"]
+    table = "\n".join(f"        <div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in rows if v)
+    groups = {}
+    for g, t in d["features"]:
+        groups.setdefault(g, []).append(t)
+    features = "".join(
+        f'\n      <div><h3>{e(g)}</h3><ul class="checks">' + "".join(f"<li>{e(t)}</li>" for t in items) + "</ul></div>"
+        for g, items in groups.items())
+    features_section = f'''
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Features</h2></div>
+    <div class="feature-groups">{features}
+    </div>
+  </div>
+</section>
+''' if features else ""
     lead_file, lead_cap = d["photos"][0]
     gallery = "\n".join(
         f'      <a href="{img(d, f)}" target="_blank" rel="noopener"><img src="{img(d, f)}" alt="{e(c)}" loading="lazy"></a>'
@@ -113,7 +137,8 @@ def page_body(d):
   </div>
 </section>
 
-<section class="tight">
+{features_section}
+<section class="alt tight">
   <div class="wrap">
     <div class="section-head"><h2>Photos</h2></div>
     <div class="gallery">

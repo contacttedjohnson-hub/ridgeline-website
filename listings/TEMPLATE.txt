@@ -21,6 +21,15 @@ listing_link:
 description:
 checked:
 
+# Optional extra rows for the Details table: "detail: Label | Value"
+detail: Property taxes |
+detail: Flood zone |
+
+# Optional Features list, grouped: "feature: Group | text"
+feature: Rooms |
+feature: Inside |
+feature: Outside and community |
+
 # Put the photos in img/listings/<folder>/ and list them in order. The first is the main photo.
 photos_folder:
 photo: 01.jpg | Front of the home
