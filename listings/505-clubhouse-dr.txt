@@ -1,0 +1,72 @@
+# Listing details for 505 Clubhouse Dr.
+# Lines are "field: value". Leave a value empty if you don't know it; empty fields are left off the page.
+# After editing, ask Claude to "rebuild the listings" (or run: python build_listings.py).
+# Source: Ted's Stellar MLS input for P4939862, saved 2026-10-23 in
+# business/real-estate/505 Clubhouse Drive/MLS input. Association contact details,
+# tax ID and legal description are deliberately left off the public page.
+
+address: 505 Clubhouse Dr
+city: Lake Wales, FL 33898
+status: For sale
+price: 240000
+beds: 2
+baths: 2
+sqft: 1678
+year_built: 1987
+garage: Attached, 21 x 20 ft
+community: Country Club Village, Phase 2
+hoa: $2,249 a year (includes the community pool)
+lot_size: 4,970 sq ft (0.11 acre)
+mls_number: P4939862
+listing_link:
+description: A two-bedroom villa in Country Club Village with a golf course view, cathedral ceilings, a fireplace, an attached garage and a private courtyard entry. The HOA covers the community pool.
+checked: 2026-10-23, from Ted's MLS input for P4939862
+
+detail: Style | Villa (attached)
+detail: Total area | 2,435 sq ft under roof
+detail: Property taxes | $1,737 for 2025, with homestead exemption
+detail: Flood zone | X
+detail: Age restriction | None
+
+feature: Rooms | Living room, 18 x 18
+feature: Rooms | Dining room, 14 x 13
+feature: Rooms | Kitchen with breakfast bar, 15 x 15
+feature: Rooms | Primary bedroom, 16 x 15
+feature: Rooms | Second bedroom, 13 x 11
+feature: Rooms | Bonus room, 18 x 8
+feature: Rooms | Inside laundry with electric dryer hookup
+feature: Inside | Cathedral ceilings and ceiling fans
+feature: Inside | Fireplace
+feature: Inside | Carpet and ceramic tile
+feature: Inside | Dishwasher, dryer, electric water heater
+feature: Inside | Central air and heat
+feature: Outside and community | Golf course view
+feature: Outside and community | Patio and porch, mature landscaping
+feature: Outside and community | Concrete block construction on a slab
+feature: Outside and community | Community pool, 32 x 16
+feature: Outside and community | Public water and septic
+feature: Outside and community | Cats allowed, no dogs
+feature: Outside and community | Leasing allowed, no minimum term
+
+photos_folder: 505-clubhouse
+
+# Photos live in img/listings/505-clubhouse/. One line per photo, in display order: "photo: file | caption".
+# The first photo is the main one. 16 (rear lawn) is left out until it is confirmed to be this house.
+photo: 01.jpg | Front of the home and two-car garage
+photo: 02.jpg | Courtyard entry
+photo: 03.jpg | Covered entrance
+photo: 04.jpg | Living room
+photo: 05.jpg | Living room toward the dining area
+photo: 06.jpg | Fireplace and sitting area
+photo: 07.jpg | Dining room and kitchen pass-through
+photo: 08.jpg | Dining room
+photo: 09.jpg | Kitchen with skylights
+photo: 10.jpg | Kitchen
+photo: 11.jpg | Bedroom
+photo: 12.jpg | Bedroom
+photo: 13.jpg | Bathroom with tub
+photo: 14.jpg | Bathroom shower
+photo: 15.jpg | Second bathroom
+photo: 17.jpg | Community pool
+photo: 18.jpg | Covered seating at the community pool
+photo: 19.jpg | Community clubhouse
